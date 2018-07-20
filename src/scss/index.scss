@@ -1,0 +1,39 @@
+@charset 'utf-8';
+
+@import 'reset.scss';
+
+.swiper-container {
+    width: 100vw;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    .swiper-slide{
+        font-size: r(100px);
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .page1{
+        background: skyblue;
+    }
+    .page2{
+        background: greenyellow;
+    }
+    .page3{
+        background: yellowgreen;
+    }
+}
+@media screen and (orientation:portrait) {
+
+    // css[竖向定义样式]
+    
+}
+@media screen and (orientation:landscape) {
+
+    .swiper-container{
+        height: 100vh;
+        width: 50vh;
+    }
+    
+}
