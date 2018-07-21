@@ -65,6 +65,8 @@ body {
   margin: 0; }
 
 .swiper-container {
+  background-color: rgba(0, 0, 0, 0.1);
+  position: relative;
   width: 100vmin;
   height: 100vh;
   margin: 0 auto; }
@@ -76,33 +78,43 @@ body {
     justify-content: center; }
   .swiper-container .page1 {
     position: relative;
-    background: skyblue; }
-    .swiper-container .page1 .pic_box1 {
+    background: transparent; }
+    .swiper-container .page1 .o_box1 {
       position: absolute;
       width: 0.6rem;
       height: 0.6rem;
-      background: #fff;
+      background: skyblue;
       right: 0;
-      top: 0.32rem;
+      top: 50%;
+      margin-top: -0.58667rem;
       display: flex;
       justify-content: center;
       align-items: center; }
-    .swiper-container .page1 .pic_box2 {
+    .swiper-container .page1 .o_box2 {
       position: absolute;
       width: 0.6rem;
       height: 0.6rem;
-      background: #fff;
+      background: skyblue;
       left: 0;
-      top: 0.89333rem;
+      bottom: 50%;
+      margin-bottom: -0.58667rem;
       display: flex;
       justify-content: center;
       align-items: center; }
   .swiper-container .page2 {
     position: relative;
-    background: greenyellow; }
+    background: transparent; }
+    .swiper-container .page2 .t_box1 {
+      width: 0.8rem;
+      height: 1.42933rem;
+      margin: 0 auto;
+      border: 0.02667rem solid;
+      border-image: -webkit-linear-gradient(#5c5fa5, #893f60) 30 30;
+      border-image: -moz-linear-gradient(#5c5fa5, #893f60) 30 30;
+      border-image: linear-gradient(#fff, #fff), linear-gradient(#5c5fa5, #893f60); }
   .swiper-container .page3 {
     position: relative;
-    background: yellowgreen; }
+    background: transparent; }
 
 @media screen and (orientation: landscape) {
   .swiper-container {

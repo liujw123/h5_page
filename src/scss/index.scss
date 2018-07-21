@@ -3,6 +3,8 @@
 @import 'reset.scss';
 
 .swiper-container {
+    background-color: rgba(0, 0, 0, 0.1);
+    position: relative;
     width: 100vmin;
     height: 100vh;
     margin: 0 auto;
@@ -15,25 +17,27 @@
     }
     .page1{
         position: relative;
-        background: skyblue;
-        .pic_box1{
+        background: transparent;
+        .o_box1{
             position: absolute;
             width: r(225px);
             height: r(225px);
-            background: #fff;
+            background: skyblue;
             right: 0;
-            top: r(120px);
+            top: 50%;
+            margin-top: r(-220px);
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        .pic_box2{
+        .o_box2{
             position: absolute;
             width: r(225px);
             height: r(225px);
-            background: #fff;
+            background: skyblue;
             left: 0;
-            top: r(335px);
+            bottom: 50%;
+            margin-bottom: r(-220px);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -41,13 +45,21 @@
     }
     .page2{
         position: relative;
-        background: greenyellow;
-        
+        background: transparent;
+        .t_box1{
+            width: r(300px);
+            height: r(536px);
+            margin: 0 auto;
+            border: r(10px) solid;
+            border-image: -webkit-linear-gradient(#5c5fa5,#893f60) 30 30;
+            border-image: -moz-linear-gradient(#5c5fa5,#893f60) 30 30;
+            border-image: linear-gradient(#fff,#fff),linear-gradient(#5c5fa5,#893f60);
+        }
         
     }
     .page3{
         position: relative;
-        background: yellowgreen;
+        background: transparent;
     }
 }
 @media screen and (orientation:portrait) {

@@ -10,24 +10,35 @@
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
-
+    <style>
+        #Mycanvas{
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -100;
+        }
+    </style>
 <body>
     <div class="swiper-container">
+        <!-- canvas背景 -->
+        <canvas id="Mycanvas"></canvas>
         <!-- 在需要运动的元素上面增加类名  ani   ，和其他的类似插件相同，Swiper Animate需要指定几个参数： -->
         <!-- swiper-animate-effect：切换效果，例如 fadeInUp  -->
         <!-- swiper-animate-duration：可选，动画持续时间（单位秒），例如 0.5s -->
         <!-- swiper-animate-delay：可选，动画延迟时间（单位秒），例如 0.3s -->
         <div class="swiper-wrapper">
             <div class="swiper-slide page1">
-                <div class="pic_box1 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+                <div class="o_box1 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
                     <p class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s">1</p>
                 </div>
-                <div class="pic_box2 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+                <div class="o_box2 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
                     <p class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s">2</p>
                 </div>
             </div>
             <div class="swiper-slide page2">
-
+                <div class="t_box1"></div>
             </div>
             <div class="swiper-slide page3">
                 <div class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">content</div>
@@ -47,12 +58,12 @@
 <script src="js/index.js"></script>
 <script src="js/swiper.min.js"></script>
 <script src="js/swiper.animate1.0.3.min.js"></script>
+<script src="js/canvas.js"></script>
 <script>        
 
     var mySwiper = new Swiper('.swiper-container', {
         direction: 'vertical',
         loop: true,
-
         // 如果需要分页器
         pagination: {
             el: '.swiper-pagination',

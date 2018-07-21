@@ -1,8 +1,8 @@
 var container = document.querySelector(".swiper-container");
 /*动态改变根元素字体大小*/
 function recalc() {
-    var deviceWidth = document.documentElement.clientWidth;
-    var deviceHeight = document.documentElement.clientHeight;
+    var deviceWidth = document.documentElement.clientWidth||window.innerWidth;
+    var deviceHeight = document.documentElement.clientHeight||window.innerHeight;
     //获取的窗口宽度
     if (!deviceWidth) return;
     var scale=deviceWidth/deviceHeight>0.6//兼容ipad
