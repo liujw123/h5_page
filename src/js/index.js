@@ -6,7 +6,7 @@ function recalc() {
     //获取的窗口宽度
     if (!deviceWidth) return;
     var scale=deviceWidth/deviceHeight>0.6//兼容ipad
-    console.log(scale)
+    // console.log(scale)
     //横屏处理
     if (!scale) {
         document.documentElement.style.fontSize = deviceWidth + 'px';
