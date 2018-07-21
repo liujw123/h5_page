@@ -5,10 +5,15 @@ function recalc() {
     var deviceHeight = document.documentElement.clientHeight;
     //获取的窗口宽度
     if (!deviceWidth) return;
-    if (deviceWidth < deviceHeight) {
+    var scale=deviceWidth/deviceHeight>0.6//兼容ipad
+    console.log(scale)
+    //横屏处理
+    if (!scale) {
         document.documentElement.style.fontSize = deviceWidth + 'px';
+        container.classList.remove("baseHeight");
     }else{
         document.documentElement.style.fontSize = deviceHeight/2 + 'px';
+        container.classList.add("baseHeight");
     }
 
 }
@@ -21,9 +26,3 @@ function initRecalc() {
     document.addEventListener('DOMContentLoaded', recalc, false);
 }
 initRecalc();
-
-// function containHeight(){
-//     var container = document.querySelector(".swiper-container");
-//     console.log(container)
-//     container.style.height=deviceHeight+'px'
-// }containHeight()

@@ -65,10 +65,8 @@ body {
   margin: 0; }
 
 .swiper-container {
-  width: 100vw;
-  height: 100vh;
-  margin-left: auto;
-  margin-right: auto; }
+  width: 100vmin;
+  height: 100vh; }
   .swiper-container .swiper-slide {
     font-size: 0.26667rem;
     font-weight: 600;
@@ -76,13 +74,40 @@ body {
     align-items: center;
     justify-content: center; }
   .swiper-container .page1 {
+    position: relative;
     background: skyblue; }
+    .swiper-container .page1 .pic_box1 {
+      position: absolute;
+      width: 0.6rem;
+      height: 0.6rem;
+      background: #fff;
+      left: 0.4rem;
+      top: 0.32rem;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .swiper-container .page1 .pic_box2 {
+      position: absolute;
+      width: 0.6rem;
+      height: 0.6rem;
+      background: #fff;
+      left: 0;
+      top: 0.89333rem;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
   .swiper-container .page2 {
+    position: relative;
     background: greenyellow; }
   .swiper-container .page3 {
+    position: relative;
     background: yellowgreen; }
 
 @media screen and (orientation: landscape) {
   .swiper-container {
     height: 100vh;
     width: 50vh; } }
+
+.baseHeight {
+  height: 100vh;
+  width: 50vh; }
