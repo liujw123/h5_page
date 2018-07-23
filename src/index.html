@@ -5,21 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--UC强制全屏-->
+    <meta name="x5-fullscreen" content="true">
+    <!--QQ强制竖屏-->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>swiper</title>
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
-    <style>
-        #Mycanvas{
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 100%;
-            z-index: -100;
-        }
-    </style>
+<style>
+    #Mycanvas {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -100;
+    }
+</style>
+
 <body>
     <div class="swiper-container">
         <!-- canvas背景 -->
@@ -38,7 +43,7 @@
                 </div>
             </div>
             <div class="swiper-slide page2">
-                <div class="t_box1"></div>
+                <div class="t_box1 ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s"></div>
             </div>
             <div class="swiper-slide page3">
                 <div class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">content</div>
@@ -87,9 +92,12 @@
             },
             slideChangeTransitionEnd: function () {
                 swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+                alert(this.activeIndex);
             }
         }
     })
 </script>
+<script src="//cdn.jsdelivr.net/npm/eruda"></script>
+<script>eruda.init();</script>
 
 </html>

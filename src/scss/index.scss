@@ -6,7 +6,7 @@
     background-color: rgba(0, 0, 0, 0.1);
     position: relative;
     width: 100vmin;
-    height: 100vh;
+    height: 100%;
     margin: 0 auto;
     .swiper-slide{
         font-size: r(100px);
@@ -47,9 +47,13 @@
         position: relative;
         background: transparent;
         .t_box1{
+            position: absolute;
+            top: 50%;
+            left: 50%;
             width: r(300px);
             height: r(536px);
-            margin: 0 auto;
+            margin-top: r(-268px);
+            margin-left: r(-150px);
             border: r(10px) solid;
             border-image: -webkit-linear-gradient(#5c5fa5,#893f60) 30 30;
             border-image: -moz-linear-gradient(#5c5fa5,#893f60) 30 30;
@@ -69,7 +73,7 @@
 @media screen and (orientation:landscape) {
      // css[横向定义样式]
     .swiper-container{
-        height: 100vh;
+        height: 100%;
         width: 50vh;
         margin: 0 auto;
     }
@@ -78,7 +82,7 @@
 
 //兼容class
 .baseHeight{
-    height: 100vh;
+    height: 100%;
     width: 50vh;
     margin: 0 auto;
 }

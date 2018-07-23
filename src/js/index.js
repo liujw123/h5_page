@@ -1,12 +1,11 @@
 var container = document.querySelector(".swiper-container");
 /*动态改变根元素字体大小*/
 function recalc() {
-    var deviceWidth = document.documentElement.clientWidth||window.innerWidth;
-    var deviceHeight = document.documentElement.clientHeight||window.innerHeight;
+    var deviceWidth = window.innerWidth||document.documentElement.clientWidth;
+    var deviceHeight = window.innerHeight||document.documentElement.clientHeight;
     //获取的窗口宽度
     if (!deviceWidth) return;
-    var scale=deviceWidth/deviceHeight>0.6//兼容ipad
-    // console.log(scale)
+    var scale=deviceWidth/deviceHeight>0.7//兼容ipad
     //横屏处理
     if (!scale) {
         document.documentElement.style.fontSize = deviceWidth + 'px';
